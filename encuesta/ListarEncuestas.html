@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>Encuestas</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<!-- Buttons DataTables -->
+	<link rel="stylesheet" href="css/buttons.bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="row fondo" style="background-color: #ffffff">
+		<div ="col-sm-12 col-md-12 col-lg-12">
+			<p style="color: #ffffff" class="text-center text-uppercase"><img src="img/logo.png"> </p>
+
+		</div>
+	</div>
+	<div class="row fondo" style="background-color:#333333">
+		<div ="col-sm-12 col-md-12 col-lg-12">
+			<h5 style="color: #ffffff" class="text-center text-uppercase"> Lista de Encuestas <i class="fa fa-hand-pointer-o" aria-hidden="true"></i></h5>
+
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-12 col-lg-12"style="background-color: #ffffff">
+	
+		</div>
+	
+	</div>
+	<div style="padding-left: 20px" class="row">
+		<div id="cuadro1" class="col-sm-12 col-md-12 col-lg-12">
+			<div class="col-sm-offset-2 col-sm-8">
+				<h3 class="text-center"> <small class="mensaje"></small></h3>
+			</div>
+			<div class="table-responsive col-sm-12">		
+				<table id="dt_cliente" class="table " cellspacing="0" width="100%">
+					<thead>
+						<tr>								
+							<th>Facultad</th>
+							<th>Escuela</th>
+							<th>Unidad Postgrado</th>
+							<th>Segunda Especialidad</th>
+							<th>Diploma</th>	
+							<th>Semestre Académico</th>	
+							<th>Años de estudio</th>
+							<th>Asigantura</th>
+							<th>Docente</th>
+							<th>Acción</th>													
+						</tr>
+					</thead>					
+				</table>
+			</div>			
+		</div>		
+	</div>
+	<div>
+		<form id="ver_encuesta" action="" method="POST">
+			<input type="hidden" id="id" name="id" value="">
+			<input type="hidden" id="opcion" name="opcion" value="eliminar">
+			<!-- Modal -->
+			<div class="modal fade" id="modalEliminar" tabindex="-1" role="dialog" aria-labelledby="modalEliminarLabel">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header" style="background-color:#333333; color: #ffffff">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h4 class="modal-title" id="modalEliminarLabel">Respuestas de la encuesta seleccionada <i class='fa fa-clone'></i></h4>
+						</div>
+						<br>
+					<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 1. ¿Demuestra dominio en la asignatura? : </label>
+                                     <input id="p1" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        </div>
+
+						<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name">2. ¿Explica con claridad? :</label>
+                                      <input id="p2" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        </div>
+                        
+							<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 3. ¿Absuelve las preguntas de los estudiantes sobre las asignaturas? : </label>
+                                     <input id="p3" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        </div>
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 4. ¿Asiste puntualmente a clases de acuerdo a su programación? : </label>
+                                     <input id="p4" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        </div>
+                        	<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 5. ¿Demuestra valores éticos en su actuar diario? :</label>
+                                     <input id="p5" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        </div>
+                        	<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 6. ¿Su trato es respetuoso y cordial? : </label>
+                                      <input id="p6" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        </div>
+                        	<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 7. ¿Promueve la participación activa de los alumnos? : </label>
+                                     <input id="p7" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        	</div>		
+
+                        	<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 8. ¿El material didáctico que utiliza en clase es actualizado? : </label>
+                                     <input id="p8" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        	</div>
+
+                        	<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 9. ¿Utiliza el método de evaluaión consignado en el sílabo? : </label>
+                                     <input id="p9" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        	</div>
+
+
+                        	<div class="col-sm-12 col-md-12 col-lg-12">
+                                <div class="form-group">
+                                    <label for="name"> 10. ¿Cumple con lo establecido en el sílabo? : </label>
+                                     <input id="p10" disabled="true" name="nombre" type="text" class="form-control" >
+                                </div>
+                        	</div>
+
+						<div style="float: none; text-align: center; " class="modal-footer" >
+							<button type="button" onclick="" class="btn btn-success" data-dismiss="modal"> Enuesta revisada <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Modal -->
+		</form>
+	</div>
+	
+	<script src="js/jquery-1.12.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.js"></script>
+	<!--botones DataTables-->	
+	<script src="js/dataTables.buttons.min.js"></script>
+	<script src="js/buttons.bootstrap.min.js"></script>
+	<!--Libreria para exportar Excel-->
+	<script src="js/jszip.min.js"></script>
+	<!--Librerias para exportar PDF-->
+	<script src="js/pdfmake.min.js"></script>
+	<script src="js/vfs_fonts.js"></script>
+	<!--Librerias para botones de exportación-->
+	<script src="js/buttons.html5.min.js"></script>
+
+	<script>		
+		$(document).on("ready", function(){
+			listar();
+		});
+
+		//$("#actu").on("click",function(){
+		//listar();
+		//})
+
+		var listar = function(){
+			var table = $("#dt_cliente").DataTable({
+
+			"destroy":true,
+			"ajax":{
+					"method":"POST",
+					"url":"listar.php"
+				},
+				"columns":[
+
+					{"data":"facultad"},
+					{"data":"escuela"},
+					{"data":"unidad_post"},
+					{"data":"seg_especi"},
+					{"data":"diplom"},
+					{"data":"sem_acad"},
+					{"data":"años_estudio"},
+					{"data":"asigantur"},
+					{"data":"nombre_ape_doc"},
+					{"defaultContent":"<button type='button' data-toggle='modal' data-target='#modalEliminar' class='ver btn btn-warning'> <i class='fa fa-eye' ></i> Ver respuestas</button>"}	
+				],
+				"language" : spain
+			});	
+			obtener_data("#dt_cliente tbody", table);
+		}
+
+		var obtener_data = function(tbody, table){
+			$(tbody).on("click","button.ver",function(){
+ 
+				var data = table.row($(this).parents("tr")).data();
+				//console.log(data);
+				var id = $("#ver_encuesta #id").val(data.id),
+				 p1= $("#p1").val(data.pregunta1),
+ 				 p2= $("#p2").val(data.pregunt2),
+ 				 p3= $("#p3").val(data.pregunta3),
+ 				 p4= $("#p4").val(data.pregunta4),
+ 				 p5= $("#p5").val(data.pregunta5),
+ 				 p6= $("#p6").val(data.pregunta6),
+ 				 p7= $("#p7").val(data.pregunta7),
+ 				 p8= $("#p8").val(data.pregunta8),
+ 				 p9= $("#p9").val(data.pregunta9),
+ 				 p10= $("#p10").val(data.pregunta10);
+			});
+		}
+
+		var spain = {
+			 "sProcessing":     "Procesando...",
+                "sLengthMenu":     "Mostrar _MENU_ registros",
+                "sZeroRecords":    "No se encontraron resultados",
+                "sEmptyTable":     "Ningún dato disponible en esta tabla =(",
+                "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+                "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+                "sInfoPostFix":    "",
+                "sSearch":         "Buscar:",
+                "sUrl":            "",
+                "sInfoThousands":  ",",
+                "sLoadingRecords": "Cargando...",
+                "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                },
+                "oAria": {
+                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+                },
+                "buttons": {
+                    "copy": "Copiar",
+                    "colvis": "Visibilidad"
+                
+		}
+	}
+
+	</script>
+</body>
+</html>
